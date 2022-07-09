@@ -5,7 +5,7 @@ var fs = require('fs');
 var server = http.createServer(function(req,res){
 	var p = url.parse(req.url,true).pathname;  //    /home
 	if(p != '/favicon.ico')
-	{
+	{ // comment by onkar
 	    var cdate = new Date();
 	    var str = "Request received for "+p+" at "+cdate.toString()+"\n";
 	    fs.appendFile("log.txt",str,function(err){
